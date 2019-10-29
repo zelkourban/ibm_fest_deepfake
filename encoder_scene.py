@@ -13,16 +13,6 @@ class Node(Circle): # Node object shape circle has list of outputs
         return VGroup(*[Line(self.get_center(),item.get_center(),stroke_width=0.6,stroke_color="#A1BAC9") for item in self.outputs])
 
 
-class ArrayTest(Scene):
-    def construct(self):
-        text_b = TextMobject("Aplikujeme ", "filtre").to_edge(UP);
-        text = TextMobject("Čo robia ", "filtre", "?").scale(2);
-        self.play(Write(text_b));
-        self.wait()
-        self.play(Write(text[0]),Write(text[2]),Transform(text_b[1],text[1]),Uncreate(text_b[0]));
-        self.wait()
-
-
 
 class LatentFaces(Scene):
     def construct(self):
@@ -59,16 +49,6 @@ class LatentFaces(Scene):
         self.play(Uncreate(whole_scene))
 
 
-class Dragana(Scene):
-    def construct(self):
-        text = TextMobject("""Webové technologie sú veľmi\\\\ zaujímavý predmet""").scale(1.8);
-        text2 = TextMobject("Mám rád Webové technologie").scale(2)
-
-        self.add(text)
-        self.wait()
-        self.play(Transform(text,text2))
-        self.wait(2)
-        self.play(Transform(text2,text))
 
 class Pixel(Scene):
     def construct(self):
@@ -260,61 +240,7 @@ class Facts(MovingCameraScene):
 
 
 
-        '''
-        self.play(ApplyMethod(pc.move_to,ORIGIN))
-        self.play(Write(text_desc));
-        box_content = VGroup(pc,text_desc);
-        box = SurroundingRectangle(box_content,color=YELLOW,buff=MED_LARGE_BUFF)
-        self.play(Write(box))
-        self.wait()
-        self.play(Uncreate(box))
-        self.play(pc.next_to,cloud,UP)
-        self.wait()
-
-        self.play(ApplyMethod(cloud.move_to,ORIGIN))
-        text_desc_new = TextMobject("Môžeme použiť cloud.").move_to(text_desc)
-        self.play(ReplacementTransform(text_desc,text_desc_new));
-        box_content = VGroup(cloud,text_desc_new);
-        box = SurroundingRectangle(box_content,color=YELLOW,buff=MED_LARGE_BUFF)
-        self.play(Write(box))
-        self.wait()
-        self.play(Uncreate(box))
-        self.play(cloud.next_to,time,UP)
-        self.wait()
-
-        self.play(ApplyMethod(time.move_to,ORIGIN))
-        text_desc = TextMobject("Môžeme použiť time.").move_to(text_desc_new)
-        self.play(ReplacementTransform(text_desc_new,text_desc));
-        box_content = VGroup(time,text_desc);
-        box = SurroundingRectangle(box_content,color=YELLOW,buff=MED_LARGE_BUFF)
-        self.play(Write(box))
-        self.wait()
-        self.play(Uncreate(box))
-        self.play(time.next_to,video,UP)
-        self.wait()
-
-        self.play(ApplyMethod(video.move_to,ORIGIN))
-        text_desc_new = TextMobject("Môžeme použiť video.").move_to(text_desc)
-        self.play(ReplacementTransform(text_desc,text_desc_new));
-        box_content = VGroup(video,text_desc_new);
-        box = SurroundingRectangle(box_content,color=YELLOW,buff=MED_LARGE_BUFF)
-        self.play(Write(box))
-        self.wait()
-        self.play(Uncreate(box))
-        self.play(video.next_to,gpu,UP)
-        self.wait()
-
-        self.play(ApplyMethod(gpu.move_to,ORIGIN))
-        text_desc = TextMobject("Môžeme použiť gpu.").move_to(text_desc_new)
-        self.play(ReplacementTransform(text_desc_new,text_desc));
-        box_content = VGroup(gpu,text_desc);
-        box = SurroundingRectangle(box_content,color=YELLOW,buff=MED_LARGE_BUFF)
-        self.play(Write(box))
-        self.wait()
-        self.play(Uncreate(box))
-        self.play(gpu.next_to,video,DOWN)
-        self.wait()
-        '''
+      
 
 class FinalScene(Scene):
     CONFIG={
@@ -1024,6 +950,4 @@ class FinalScene(Scene):
         self.wait(5)
 
 
-        #whole_scene = VGroup(network,network_copy,new_arrows)
-        #self.wait(2)
-        #self.play(Uncreate(whole_scene))
+ 
