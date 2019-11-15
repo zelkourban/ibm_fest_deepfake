@@ -3,7 +3,7 @@ Jupyter notebooks for creating deepfake videos using DeepFaceLab library and clo
 
 
 ## Video
-[![Watch the video](https://media.giphy.com/media/lNS5i1d3e1sOiCIkcP/giphy.gif)](https://youtu.be/0mGFcu32xV0)
+[![Watch the video](https://media.giphy.com/media/lNS5i1d3e1sOiCIkcP/giphy.gif)](https://www.youtube.com/watch?v=ZzHo0QafmXs)
 
 
 ## Libraries (knižnice)
